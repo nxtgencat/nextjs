@@ -2,6 +2,13 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+// fonts.ts or layout.tsx
+import { Urbanist } from "next/font/google";
+
+export const urbanist = Urbanist({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 export default function SkinTreatmentSlider() {
   const [visible, setVisible] = useState(3);
@@ -51,9 +58,12 @@ export default function SkinTreatmentSlider() {
       <div className="max-w-[1200px] mx-auto">
 
         {/* Heading */}
-        <h2 className="text-[56px] leading-[64px] font-medium text-[#3A0A2A]">
-          Best Skin Treatment in Hyderabad, Vijayawada
-        </h2>
+        <h2
+  className={`${urbanist.className} text-[56px] leading-[64px] font-medium text-[#3A0A2A]`}
+>
+  Best Skin Treatment in Hyderabad, Vijayawada
+</h2>
+
 
         {/* Slider */}
         <div className="mt-8 relative overflow-hidden">
