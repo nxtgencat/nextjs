@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import { Urbanist } from "next/font/google";
 
 const urbanist = Urbanist({
@@ -7,25 +10,25 @@ const urbanist = Urbanist({
 });
 
 export default function Hero() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <section className={`${urbanist.className} bg-[#EAF7F8] overflow-hidden`}>
 
       {/* ================= NAVBAR ================= */}
-      <header className="w-full py-6">
+      <header className="w-full py-6 relative z-50">
         <div className="container mx-auto px-6 md:px-12 lg:px-20 flex items-center justify-between">
 
           {/* LOGO */}
-          <div>
-            <Image
-              src="/logo.png"
-              alt="Logo"
-              width={130}
-              height={40}
-              className="object-contain"
-            />
-          </div>
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={130}
+            height={40}
+            className="object-contain"
+          />
 
-          {/* MENU + BUTTON */}
+          {/* DESKTOP MENU */}
           <nav className="hidden md:flex items-center gap-6 text-[15px] text-[#1A1A1A] font-medium">
             <a href="#">Home</a>
             <a href="#">About</a>
@@ -33,18 +36,52 @@ export default function Hero() {
             <a href="#">Testimonial</a>
             <a href="#">FAQs</a>
 
-            {/* CONTACT US BUTTON - CLOSE TO FAQs */}
             <button className="px-7 py-2 bg-[#1F325C] text-white rounded-full hover:opacity-90 transition">
               Contact Us
             </button>
           </nav>
 
+          {/* HAMBURGER (MOBILE) */}
+          <button
+            className="md:hidden p-2"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#1A1A1A"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+
         </div>
+
+        {/* MOBILE DROPDOWN MENU */}
+        {menuOpen && (
+          <div className="md:hidden bg-white shadow-xl rounded-xl mx-6 mt-4 p-6 flex flex-col gap-5 text-[16px] font-medium text-[#1A1A1A]">
+            <a href="#" className="py-1">Home</a>
+            <a href="#" className="py-1">About</a>
+            <a href="#" className="py-1">Why Choose</a>
+            <a href="#" className="py-1">Testimonial</a>
+            <a href="#" className="py-1">FAQs</a>
+
+            <button className="px-7 py-2 bg-[#1F325C] text-white rounded-full w-max mt-2">
+              Contact Us
+            </button>
+          </div>
+        )}
       </header>
 
-      {/* ================= HERO ================= */}
+      {/* ================= HERO SECTION ================= */}
       <div className="pt-8 pb-20">
-
         <div className="container mx-auto px-6 md:px-12 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
@@ -80,6 +117,7 @@ export default function Hero() {
                         <path d="M7 17L17 7M17 7H9M17 7V15" />
                       </svg>
                     </span>
+
                   </span>
 
                   for Every
@@ -89,7 +127,6 @@ export default function Hero() {
                 Stage of Life
               </h1>
 
-              {/* Paragraph */}
               <p className="text-[#6A6A6A] mt-6 max-w-lg text-[15px] leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua.
@@ -111,7 +148,6 @@ export default function Hero() {
                   <p className="text-[32px] font-medium text-[#1A1A1A]">200+</p>
                   <p className="text-[#6A6A6A] text-[14px]">Lorem Ipsum Dolor</p>
                 </div>
-
                 <div>
                   <p className="text-[32px] font-medium text-[#1A1A1A]">70K+</p>
                   <p className="text-[#6A6A6A] text-[14px]">Lorem Ipsum Dolor</p>
@@ -171,7 +207,6 @@ export default function Hero() {
                   <p className="text-[17px] font-semibold text-[#1A1A1A]">
                     Top Results of SKin
                   </p>
-
                   <p className="text-[12px] text-[#6A6A6A] mt-1">
                     Lorem ipsum dolor sit amet, consectetur
                   </p>
