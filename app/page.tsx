@@ -1,10 +1,11 @@
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import ServicesGrid from "../components/ServicesGrid";
-import AboutSection from "../components/AboutSection";
-import TreatmentSlider from "../components/TreatmentSlider";
+import WelcomeSection from "../components/WelcomeSection";
+import SplitContentSection from "../components/SplitContentSection";
+import PhotoGallerySection from "../components/PhotoGallerySection";
 import CTASection from "../components/CTASection";
-import ReviewsSection from "../components/ReviewsSection";
+import WhyChooseSection from "../components/WhyChooseSection";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -13,10 +14,11 @@ export default function Home() {
       <Header />
       <HeroSection />
       <ServicesGrid />
-      <AboutSection />
-      <TreatmentSlider />
+      <WelcomeSection />
+      <SplitContentSection />
+      <PhotoGallerySection />
       <CTASection />
-      <ReviewsSection />
+      <WhyChooseSection />
       <Footer />
     </>
   );

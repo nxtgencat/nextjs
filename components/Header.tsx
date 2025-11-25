@@ -2,31 +2,25 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Urbanist } from "next/font/google";
 import { Phone, MapPin, Menu, X } from "lucide-react";
-
-const urbanist = Urbanist({
-    subsets: ["latin"],
-    weight: ["300", "400", "500", "600", "700"],
-});
+import { navigationLinks, contactInfo } from "../data/content";
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <header className={`${urbanist.className} w-full bg-white shadow-sm`}>
-            {/* Top Bar - Hidden on mobile */}
+        <header className="w-full bg-white shadow-sm">
             <div className="hidden lg:block bg-[#1F325C] text-white py-2">
                 <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 max-w-7xl">
                     <div className="flex items-center justify-between text-sm">
                         <div className="flex items-center gap-6">
-                            <a href="tel:+917660003381" className="flex items-center gap-2 hover:text-[#EAF7F8] transition-colors">
+                            <a href={`tel:${contactInfo.phones[1]}`} className="flex items-center gap-2 hover:text-[#EAF7F8] transition-colors">
                                 <Phone className="w-4 h-4" />
-                                <span>+91-7660003381</span>
+                                <span>{contactInfo.phones[1]}</span>
                             </a>
-                            <a href="tel:+917660003383" className="flex items-center gap-2 hover:text-[#EAF7F8] transition-colors">
+                            <a href={`tel:${contactInfo.phones[2]}`} className="flex items-center gap-2 hover:text-[#EAF7F8] transition-colors">
                                 <Phone className="w-4 h-4" />
-                                <span>+91-7660003383</span>
+                                <span>{contactInfo.phones[2]}</span>
                             </a>
                         </div>
                         <div className="flex items-center gap-2">
@@ -37,12 +31,9 @@ export default function Header() {
                 </div>
             </div>
 
-            {/* Main Navigation */}
             <div className="border-b border-gray-100">
                 <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 max-w-7xl">
                     <div className="flex items-center justify-between h-20">
-
-                        {/* Logo */}
                         <a href="/" className="flex-shrink-0">
                             <Image
                                 src="/logo.svg"
@@ -54,33 +45,24 @@ export default function Header() {
                             />
                         </a>
 
-                        {/* Desktop Navigation */}
                         <nav className="hidden lg:flex items-center gap-1">
-                            <a href="#home" className="px-4 py-2 text-[#1A1A1A] hover:text-[#1F325C] hover:bg-[#EAF7F8] rounded-lg transition-all font-medium">
-                                Home
-                            </a>
-                            <a href="#services" className="px-4 py-2 text-[#1A1A1A] hover:text-[#1F325C] hover:bg-[#EAF7F8] rounded-lg transition-all font-medium">
-                                Services
-                            </a>
-                            <a href="#about" className="px-4 py-2 text-[#1A1A1A] hover:text-[#1F325C] hover:bg-[#EAF7F8] rounded-lg transition-all font-medium">
-                                About Us
-                            </a>
-                            <a href="#treatments" className="px-4 py-2 text-[#1A1A1A] hover:text-[#1F325C] hover:bg-[#EAF7F8] rounded-lg transition-all font-medium">
-                                Treatments
-                            </a>
-                            <a href="#testimonials" className="px-4 py-2 text-[#1A1A1A] hover:text-[#1F325C] hover:bg-[#EAF7F8] rounded-lg transition-all font-medium">
-                                Testimonials
-                            </a>
+                            {navigationLinks.map((link) => (
+                                <a
+                                    key={link.href}
+                                    href={link.href}
+                                    className="px-4 py-2 text-[#1A1A1A] hover:text-[#1F325C] hover:bg-[#EAF7F8] rounded-lg transition-all font-medium"
+                                >
+                                    {link.label}
+                                </a>
+                            ))}
                         </nav>
 
-                        {/* CTA Button */}
                         <div className="hidden lg:flex items-center gap-3">
                             <button className="px-6 py-2.5 bg-[#1F325C] text-white rounded-full hover:bg-[#152340] transition-all font-medium shadow-sm hover:shadow-md">
                                 Book Free Consultation
                             </button>
                         </div>
 
-                        {/* Mobile Menu Button */}
                         <button
                             onClick={() => setMenuOpen(!menuOpen)}
                             className="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
@@ -96,59 +78,31 @@ export default function Header() {
                 </div>
             </div>
 
-            {/* Mobile Menu */}
             {menuOpen && (
                 <div className="lg:hidden bg-white border-b border-gray-100 shadow-lg">
                     <div className="container mx-auto px-4 sm:px-6 py-4 space-y-1">
-                        <a
-                            href="#home"
-                            className="block px-4 py-3 text-[#1A1A1A] hover:bg-[#EAF7F8] hover:text-[#1F325C] rounded-lg transition-all font-medium"
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            Home
-                        </a>
-                        <a
-                            href="#services"
-                            className="block px-4 py-3 text-[#1A1A1A] hover:bg-[#EAF7F8] hover:text-[#1F325C] rounded-lg transition-all font-medium"
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            Services
-                        </a>
-                        <a
-                            href="#about"
-                            className="block px-4 py-3 text-[#1A1A1A] hover:bg-[#EAF7F8] hover:text-[#1F325C] rounded-lg transition-all font-medium"
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            About Us
-                        </a>
-                        <a
-                            href="#treatments"
-                            className="block px-4 py-3 text-[#1A1A1A] hover:bg-[#EAF7F8] hover:text-[#1F325C] rounded-lg transition-all font-medium"
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            Treatments
-                        </a>
-                        <a
-                            href="#testimonials"
-                            className="block px-4 py-3 text-[#1A1A1A] hover:bg-[#EAF7F8] hover:text-[#1F325C] rounded-lg transition-all font-medium"
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            Testimonials
-                        </a>
-
-                        {/* Mobile Contact Info */}
-                        <div className="pt-4 mt-4 border-t border-gray-100 space-y-2">
-                            <a href="tel:+917660003381" className="flex items-center gap-2 px-4 py-2 text-[#1F325C] hover:bg-[#EAF7F8] rounded-lg transition-all">
-                                <Phone className="w-4 h-4" />
-                                <span className="text-sm font-medium">+91-7660003381</span>
+                        {navigationLinks.map((link) => (
+                            <a
+                                key={link.href}
+                                href={link.href}
+                                className="block px-4 py-3 text-[#1A1A1A] hover:bg-[#EAF7F8] hover:text-[#1F325C] rounded-lg transition-all font-medium"
+                                onClick={() => setMenuOpen(false)}
+                            >
+                                {link.label}
                             </a>
-                            <a href="tel:+917660003383" className="flex items-center gap-2 px-4 py-2 text-[#1F325C] hover:bg-[#EAF7F8] rounded-lg transition-all">
+                        ))}
+
+                        <div className="pt-4 mt-4 border-t border-gray-100 space-y-2">
+                            <a href={`tel:${contactInfo.phones[1]}`} className="flex items-center gap-2 px-4 py-2 text-[#1F325C] hover:bg-[#EAF7F8] rounded-lg transition-all">
                                 <Phone className="w-4 h-4" />
-                                <span className="text-sm font-medium">+91-7660003383</span>
+                                <span className="text-sm font-medium">{contactInfo.phones[1]}</span>
+                            </a>
+                            <a href={`tel:${contactInfo.phones[2]}`} className="flex items-center gap-2 px-4 py-2 text-[#1F325C] hover:bg-[#EAF7F8] rounded-lg transition-all">
+                                <Phone className="w-4 h-4" />
+                                <span className="text-sm font-medium">{contactInfo.phones[2]}</span>
                             </a>
                         </div>
 
-                        {/* Mobile CTA */}
                         <div className="pt-2">
                             <button
                                 className="w-full px-6 py-3 bg-[#1F325C] text-white rounded-lg hover:bg-[#152340] transition-all font-medium"
