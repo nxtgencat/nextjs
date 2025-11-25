@@ -28,11 +28,15 @@ export default function CTASection() {
                     {/* CTA TEXT */}
                     <div className="text-center relative z-10">
                         <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-medium">
-                            Walk In or Book <br className="hidden sm:block" /> Online — We're Ready
+                            Book Your Free <br className="hidden sm:block" /> Consultation Today
                         </h2>
 
+                        <p className="text-white/90 text-sm md:text-base mt-4 max-w-2xl mx-auto">
+                            Experience world-class cosmetic care at Amista Clinic. Our expert team is ready to help you achieve your beauty goals.
+                        </p>
+
                         <button className="mt-6 md:mt-8 bg-white text-[#1F325C] px-6 md:px-8 py-2.5 md:py-3 rounded-full text-sm md:text-base font-medium hover:bg-gray-50 transition">
-                            Contact Now
+                            Book Appointment
                         </button>
                     </div>
                 </div>

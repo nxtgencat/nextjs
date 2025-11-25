@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Urbanist } from "next/font/google";
+import { Phone, MapPin, Menu, X } from "lucide-react";
 
 const urbanist = Urbanist({
     subsets: ["latin"],
@@ -13,66 +14,150 @@ export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <header className={`${urbanist.className} w-full py-4 md:py-6 relative z-50`}>
-            <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 max-w-7xl flex items-center justify-between">
-
-                {/* LOGO */}
-                <Image
-                    src="/logo.svg"
-                    alt="Logo"
-                    width={130}
-                    height={40}
-                    className="object-contain w-24 sm:w-28 md:w-32 h-auto"
-                />
-
-                {/* DESKTOP MENU */}
-                <nav className="hidden md:flex items-center gap-4 lg:gap-6 text-sm lg:text-base text-[#1A1A1A] font-medium">
-                    <a href="#" className="hover:text-[#1F325C] transition-colors">Home</a>
-                    <a href="#" className="hover:text-[#1F325C] transition-colors">About</a>
-                    <a href="#" className="hover:text-[#1F325C] transition-colors">Why Choose</a>
-                    <a href="#" className="hover:text-[#1F325C] transition-colors">Testimonial</a>
-                    <a href="#" className="hover:text-[#1F325C] transition-colors">FAQs</a>
-
-                    <button className="px-5 lg:px-7 py-2 bg-[#1F325C] text-white rounded-full hover:opacity-90 transition text-sm lg:text-base">
-                        Contact Us
-                    </button>
-                </nav>
-
-                {/* HAMBURGER (MOBILE) */}
-                <button
-                    className="md:hidden p-2"
-                    onClick={() => setMenuOpen(!menuOpen)}
-                    aria-label="Toggle menu"
-                >
-                    <svg
-                        width="28"
-                        height="28"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#1A1A1A"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    >
-                        <line x1="3" y1="6" x2="21" y2="6" />
-                        <line x1="3" y1="12" x2="21" y2="12" />
-                        <line x1="3" y1="18" x2="21" y2="18" />
-                    </svg>
-                </button>
+        <header className={`${urbanist.className} w-full bg-white shadow-sm`}>
+            {/* Top Bar - Hidden on mobile */}
+            <div className="hidden lg:block bg-[#1F325C] text-white py-2">
+                <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 max-w-7xl">
+                    <div className="flex items-center justify-between text-sm">
+                        <div className="flex items-center gap-6">
+                            <a href="tel:+917660003381" className="flex items-center gap-2 hover:text-[#EAF7F8] transition-colors">
+                                <Phone className="w-4 h-4" />
+                                <span>+91-7660003381</span>
+                            </a>
+                            <a href="tel:+917660003383" className="flex items-center gap-2 hover:text-[#EAF7F8] transition-colors">
+                                <Phone className="w-4 h-4" />
+                                <span>+91-7660003383</span>
+                            </a>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <MapPin className="w-4 h-4" />
+                            <span>Banjara Hills, Hyderabad | Vijayawada | Manikonda</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            {/* MOBILE DROPDOWN MENU */}
-            {menuOpen && (
-                <div className="md:hidden bg-white shadow-xl rounded-xl mx-4 sm:mx-6 mt-4 p-6 flex flex-col gap-5 text-base font-medium text-[#1A1A1A]">
-                    <a href="#" className="py-1 hover:text-[#1F325C] transition-colors">Home</a>
-                    <a href="#" className="py-1 hover:text-[#1F325C] transition-colors">About</a>
-                    <a href="#" className="py-1 hover:text-[#1F325C] transition-colors">Why Choose</a>
-                    <a href="#" className="py-1 hover:text-[#1F325C] transition-colors">Testimonial</a>
-                    <a href="#" className="py-1 hover:text-[#1F325C] transition-colors">FAQs</a>
+            {/* Main Navigation */}
+            <div className="border-b border-gray-100">
+                <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 max-w-7xl">
+                    <div className="flex items-center justify-between h-20">
 
-                    <button className="px-7 py-2 bg-[#1F325C] text-white rounded-full w-max mt-2 hover:opacity-90 transition">
-                        Contact Us
-                    </button>
+                        {/* Logo */}
+                        <a href="/" className="flex-shrink-0">
+                            <Image
+                                src="/logo.svg"
+                                alt="Amista Cosmetology Clinic"
+                                width={140}
+                                height={45}
+                                className="object-contain w-28 sm:w-32 md:w-36 h-auto"
+                                priority
+                            />
+                        </a>
+
+                        {/* Desktop Navigation */}
+                        <nav className="hidden lg:flex items-center gap-1">
+                            <a href="#home" className="px-4 py-2 text-[#1A1A1A] hover:text-[#1F325C] hover:bg-[#EAF7F8] rounded-lg transition-all font-medium">
+                                Home
+                            </a>
+                            <a href="#services" className="px-4 py-2 text-[#1A1A1A] hover:text-[#1F325C] hover:bg-[#EAF7F8] rounded-lg transition-all font-medium">
+                                Services
+                            </a>
+                            <a href="#about" className="px-4 py-2 text-[#1A1A1A] hover:text-[#1F325C] hover:bg-[#EAF7F8] rounded-lg transition-all font-medium">
+                                About Us
+                            </a>
+                            <a href="#treatments" className="px-4 py-2 text-[#1A1A1A] hover:text-[#1F325C] hover:bg-[#EAF7F8] rounded-lg transition-all font-medium">
+                                Treatments
+                            </a>
+                            <a href="#testimonials" className="px-4 py-2 text-[#1A1A1A] hover:text-[#1F325C] hover:bg-[#EAF7F8] rounded-lg transition-all font-medium">
+                                Testimonials
+                            </a>
+                        </nav>
+
+                        {/* CTA Button */}
+                        <div className="hidden lg:flex items-center gap-3">
+                            <button className="px-6 py-2.5 bg-[#1F325C] text-white rounded-full hover:bg-[#152340] transition-all font-medium shadow-sm hover:shadow-md">
+                                Book Free Consultation
+                            </button>
+                        </div>
+
+                        {/* Mobile Menu Button */}
+                        <button
+                            onClick={() => setMenuOpen(!menuOpen)}
+                            className="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                            aria-label="Toggle menu"
+                        >
+                            {menuOpen ? (
+                                <X className="w-6 h-6 text-[#1A1A1A]" />
+                            ) : (
+                                <Menu className="w-6 h-6 text-[#1A1A1A]" />
+                            )}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            {/* Mobile Menu */}
+            {menuOpen && (
+                <div className="lg:hidden bg-white border-b border-gray-100 shadow-lg">
+                    <div className="container mx-auto px-4 sm:px-6 py-4 space-y-1">
+                        <a
+                            href="#home"
+                            className="block px-4 py-3 text-[#1A1A1A] hover:bg-[#EAF7F8] hover:text-[#1F325C] rounded-lg transition-all font-medium"
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            Home
+                        </a>
+                        <a
+                            href="#services"
+                            className="block px-4 py-3 text-[#1A1A1A] hover:bg-[#EAF7F8] hover:text-[#1F325C] rounded-lg transition-all font-medium"
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            Services
+                        </a>
+                        <a
+                            href="#about"
+                            className="block px-4 py-3 text-[#1A1A1A] hover:bg-[#EAF7F8] hover:text-[#1F325C] rounded-lg transition-all font-medium"
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            About Us
+                        </a>
+                        <a
+                            href="#treatments"
+                            className="block px-4 py-3 text-[#1A1A1A] hover:bg-[#EAF7F8] hover:text-[#1F325C] rounded-lg transition-all font-medium"
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            Treatments
+                        </a>
+                        <a
+                            href="#testimonials"
+                            className="block px-4 py-3 text-[#1A1A1A] hover:bg-[#EAF7F8] hover:text-[#1F325C] rounded-lg transition-all font-medium"
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            Testimonials
+                        </a>
+
+                        {/* Mobile Contact Info */}
+                        <div className="pt-4 mt-4 border-t border-gray-100 space-y-2">
+                            <a href="tel:+917660003381" className="flex items-center gap-2 px-4 py-2 text-[#1F325C] hover:bg-[#EAF7F8] rounded-lg transition-all">
+                                <Phone className="w-4 h-4" />
+                                <span className="text-sm font-medium">+91-7660003381</span>
+                            </a>
+                            <a href="tel:+917660003383" className="flex items-center gap-2 px-4 py-2 text-[#1F325C] hover:bg-[#EAF7F8] rounded-lg transition-all">
+                                <Phone className="w-4 h-4" />
+                                <span className="text-sm font-medium">+91-7660003383</span>
+                            </a>
+                        </div>
+
+                        {/* Mobile CTA */}
+                        <div className="pt-2">
+                            <button
+                                className="w-full px-6 py-3 bg-[#1F325C] text-white rounded-lg hover:bg-[#152340] transition-all font-medium"
+                                onClick={() => setMenuOpen(false)}
+                            >
+                                Book Free Consultation
+                            </button>
+                        </div>
+                    </div>
                 </div>
             )}
         </header>

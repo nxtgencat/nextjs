@@ -8,6 +8,29 @@ const urbanist = Urbanist({
 });
 
 export default function ReviewsSection() {
+    const testimonials = [
+        {
+            name: "B. Deepa",
+            company: "Hyderabad",
+            review: "I consulted Amista for pimple treatment. The Treatment is satisfactory. Received good results. Recommend Amista clinic to everyone who's looking for skin care services, friendly nature and good receiving."
+        },
+        {
+            name: "M. Priya",
+            company: "Banjara Hills",
+            review: "I went to Amista for Acne Treatment, got results in less period of time, Excellent Services & Treatment. Very good services for skin treatment, More benefits in less amount."
+        },
+        {
+            name: "S. Vinay",
+            company: "Vijayawada",
+            review: "I underwent a full body laser hair removal treatment, and I was impressed with the high-quality laser machines that Amista uses. It was a pain-free and smooth session."
+        },
+        {
+            name: "K. Preethi",
+            company: "Manikonda",
+            review: "It's been a great experience at the Amista. This is one of its kinds of the professionally run facility in Hyderabad. Really, state of the art equipment and services. Highly recommended!"
+        }
+    ];
+
     return (
         <section className={`${urbanist.className} w-full bg-[#EAF7F8] px-4 md:px-10 lg:px-20 pb-12 md:pb-16 lg:pb-20`}>
             <div className="container mx-auto max-w-7xl">
@@ -16,8 +39,8 @@ export default function ReviewsSection() {
                 <div className="mb-10 md:mb-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
 
                     <h3 className="text-[#1F325C] text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-medium leading-tight text-center md:text-left">
-                        Compassion You Can <br />
-                        Feel, Care You Can Trust
+                        Trusted by 1000+<br />
+                        Happy Clients
                     </h3>
 
                     {/* RIGHT CIRCLES */}
@@ -51,7 +74,7 @@ export default function ReviewsSection() {
 
                 {/* ===================== REVIEWS ===================== */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10">
-                    {[1, 2, 3, 4].map((i) => (
+                    {testimonials.map((testimonial, i) => (
                         <div key={i} className="bg-transparent">
 
                             {/* Stars */}
@@ -63,12 +86,12 @@ export default function ReviewsSection() {
 
                             {/* Description */}
                             <p className="text-[#1F325C] text-sm md:text-base leading-relaxed opacity-70">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                {testimonial.review}
                             </p>
 
                             {/* Name */}
-                            <p className="mt-4 text-lg md:text-xl text-[#1F325C] font-medium">Your Name</p>
-                            <p className="text-xs md:text-sm text-[#1F325C] opacity-70">Company Name</p>
+                            <p className="mt-4 text-lg md:text-xl text-[#1F325C] font-medium">{testimonial.name}</p>
+                            <p className="text-xs md:text-sm text-[#1F325C] opacity-70">{testimonial.company}</p>
 
                             {/* Quote Icon */}
                             <div className="flex justify-end mt-2">

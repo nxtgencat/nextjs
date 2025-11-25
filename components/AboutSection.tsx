@@ -18,7 +18,7 @@ export default function AboutSection() {
                     <div className="order-2 lg:order-1 flex justify-center lg:justify-end">
                         <Image
                             src="/Images.png"
-                            alt="About us"
+                            alt="Amista Cosmetology Clinic facility"
                             width={450}
                             height={350}
                             className="rounded-2xl object-cover w-full max-w-md lg:max-w-lg h-auto"
@@ -34,7 +34,7 @@ export default function AboutSection() {
                             <div className="w-32 sm:w-36 md:w-40 h-24 sm:h-28 md:h-32 rounded-2xl overflow-hidden flex-shrink-0">
                                 <Image
                                     src="/small.png"
-                                    alt="Service preview"
+                                    alt="Advanced equipment"
                                     width={300}
                                     height={200}
                                     className="w-full h-full object-cover"
@@ -44,7 +44,7 @@ export default function AboutSection() {
                             <div className="w-48 sm:w-52 md:w-60 h-36 sm:h-40 md:h-44 rounded-2xl overflow-hidden flex-shrink-0">
                                 <Image
                                     src="/red.png"
-                                    alt="Service showcase"
+                                    alt="Treatment room"
                                     width={500}
                                     height={350}
                                     className="w-full h-full object-cover"
@@ -56,12 +56,12 @@ export default function AboutSection() {
                         <div className="mt-4 md:mt-6 lg:mt-8 text-center lg:text-left">
                             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight text-black">
                                 More Than a Clinic<br />
-                                — We're Your Health<br />
-                                Partner
+                                — We're Your Beauty<br />
+                                \u0026 Wellness Partner
                             </h2>
 
                             <p className="text-gray-700 text-sm md:text-base mt-4 max-w-md mx-auto lg:mx-0">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.
+                                At Amista, our team of experienced cosmo-dermatologists and certified therapists use US-FDA approved equipment to deliver exceptional results with the highest medical standards.
                             </p>
                         </div>
 

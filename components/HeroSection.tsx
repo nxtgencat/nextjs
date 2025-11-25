@@ -19,7 +19,7 @@ export default function HeroSection() {
                         {/* LEFT CONTENT */}
                         <div className="text-center lg:text-left">
                             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight font-medium text-[#1A1A1A]">
-                                Trusted Care{" "}
+                                Get Radiant{" "}
 
                                 <span className="inline-flex items-center gap-2 align-middle">
                                     {/* Circles Container */}
@@ -49,37 +49,36 @@ export default function HeroSection() {
                                         </span>
                                     </span>
 
-                                    for Every
+                                    Looking Skin
                                 </span>
 
                                 <br />
-                                Stage of Life
+                                With Expert Care
                             </h1>
 
                             <p className="text-[#6A6A6A] mt-4 md:mt-6 max-w-lg mx-auto lg:mx-0 text-sm md:text-base leading-relaxed">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua.
+                                Experience premium skin, hair, and cosmetic treatments at Amista Cosmetology Clinic. Your trusted partner for advanced dermatology and aesthetic solutions in Hyderabad and Vijayawada.
                             </p>
 
                             {/* Buttons */}
                             <div className="flex flex-col sm:flex-row gap-4 md:gap-5 mt-6 md:mt-10 justify-center lg:justify-start">
                                 <button className="px-8 md:px-10 py-2.5 md:py-3 bg-[#1F325C] text-white rounded-full text-sm md:text-base hover:opacity-90 transition">
-                                    Explore Now
+                                    Explore Services
                                 </button>
                                 <button className="px-8 md:px-10 py-2.5 md:py-3 border border-[#1F325C] text-[#1F325C] rounded-full text-sm md:text-base hover:bg-[#f0f4fb] transition">
-                                    Book Consultation
+                                    Book Free Consultation
                                 </button>
                             </div>
 
                             {/* Stats */}
                             <div className="flex gap-8 md:gap-12 lg:gap-16 mt-10 md:mt-14 justify-center lg:justify-start">
                                 <div>
-                                    <p className="text-2xl md:text-3xl font-medium text-[#1A1A1A]">200+</p>
-                                    <p className="text-[#6A6A6A] text-xs md:text-sm">Lorem Ipsum Dolor</p>
+                                    <p className="text-2xl md:text-3xl font-medium text-[#1A1A1A]">100+</p>
+                                    <p className="text-[#6A6A6A] text-xs md:text-sm">Treatment Options</p>
                                 </div>
                                 <div>
-                                    <p className="text-2xl md:text-3xl font-medium text-[#1A1A1A]">70K+</p>
-                                    <p className="text-[#6A6A6A] text-xs md:text-sm">Lorem Ipsum Dolor</p>
+                                    <p className="text-2xl md:text-3xl font-medium text-[#1A1A1A]">1000+</p>
+                                    <p className="text-[#6A6A6A] text-xs md:text-sm">Happy Clients</p>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +89,7 @@ export default function HeroSection() {
                             <div className="rounded-3xl overflow-hidden shadow-xl bg-white w-full max-w-[420px] mx-auto aspect-[420/550]">
                                 <Image
                                     src="/hero.png"
-                                    alt="Hero Image"
+                                    alt="Amista Cosmetology Clinic"
                                     width={420}
                                     height={550}
                                     className="object-cover w-full h-full"
@@ -104,14 +103,14 @@ export default function HeroSection() {
                                         src="/hero.png"
                                         width={48}
                                         height={48}
-                                        alt="User"
+                                        alt="Dermatologist"
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
 
                                 <div className="flex-1 min-w-0">
-                                    <p className="text-sm font-medium text-[#1A1A1A] truncate">Your Name</p>
-                                    <p className="text-xs text-[#6A6A6A] truncate">Specialist Doctor</p>
+                                    <p className="text-sm font-medium text-[#1A1A1A] truncate">Expert Dermatologist</p>
+                                    <p className="text-xs text-[#6A6A6A] truncate">Certified Specialist</p>
                                 </div>
 
                                 <div className="w-8 h-8 bg-[#1F325C] rounded-full flex items-center justify-center flex-shrink-0">
@@ -134,15 +133,15 @@ export default function HeroSection() {
                             <div className="mt-6 md:mt-0 md:absolute md:bottom-0 lg:-bottom-8 xl:-bottom-10 left-1/2 md:-translate-x-1/2 bg-white rounded-2xl shadow-xl p-4 md:p-5 lg:p-6 w-full max-w-[380px] flex justify-between items-center gap-4">
                                 <div className="flex-1 min-w-0">
                                     <p className="text-base md:text-lg font-semibold text-[#1A1A1A]">
-                                        Top Results of Skin
+                                        Advanced Skin Treatments
                                     </p>
                                     <p className="text-xs md:text-sm text-[#6A6A6A] mt-1 line-clamp-2">
-                                        Lorem ipsum dolor sit amet, consectetur
+                                        Experience cutting-edge dermatology treatments
                                     </p>
 
                                     <div className="flex gap-4 md:gap-6 mt-2 text-xs md:text-sm text-[#6A6A6A]">
-                                        <span>Heart Attacks</span>
-                                        <span>Brain Damage</span>
+                                        <span>Laser Therapy</span>
+                                        <span>Anti-Aging</span>
                                     </div>
                                 </div>
 
@@ -151,7 +150,7 @@ export default function HeroSection() {
                                     width={70}
                                     height={70}
                                     className="rounded-xl object-cover w-16 h-16 md:w-[70px] md:h-[70px] flex-shrink-0"
-                                    alt=""
+                                    alt="Treatment preview"
                                 />
                             </div>
                         </div>

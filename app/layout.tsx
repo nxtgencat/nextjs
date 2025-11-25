@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Amista",
-  description: "Experience premium healthcare services including skin treatments, acne care, BB Glow, HydraFacial, and pigmentation treatment. Your trusted health partner in Hyderabad and Vijayawada.",
+  description: "Premier cosmetology clinic in Hyderabad & Vijayawada offering advanced skin, hair & cosmetic treatments. Expert care for acne, laser hair removal, anti-aging, permanent makeup, and body slimming. Book your free consultation today!",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

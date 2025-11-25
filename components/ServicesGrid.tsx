@@ -10,32 +10,32 @@ const urbanist = Urbanist({
 export default function ServicesGrid() {
     const services = [
         {
-            title: "Acne\nTreatment",
-            description: "Targeted solutions to reduce acne and promote clear, healthy skin.",
+            title: "Acne & Scar\nTreatment",
+            description: "Advanced acne reduction and scar correction for smooth, clear skin.",
             bgColor: "#F4EFCA",
             textColor: "#3D3400",
             buttonColor: "#585019",
             image: "/card1.png"
         },
         {
-            title: "BB Glow\nTreatment",
-            description: "Semi-permanent treatment for glowing, poreless skin.",
+            title: "HydraFacial &\nBB Glow",
+            description: "Deep cleansing and radiant, pore-less looking skin treatments.",
             bgColor: "#A2C8E8",
             textColor: "#1D3053",
             buttonColor: "#1A386B",
             image: "/card2.png"
         },
         {
-            title: "HydraFacial",
-            description: "Deep cleansing and hydration for refreshed skin.",
+            title: "Laser Hair\nRemoval",
+            description: "Permanent hair removal with advanced laser technology.",
             bgColor: "#D6D4C5",
             textColor: "#37350C",
             buttonColor: "#3E4928",
             image: "/card3.png"
         },
         {
-            title: "Pigmentation\nTreatment",
-            description: "Lighten dark spots and even out skin tone.",
+            title: "Anti-Aging &\nFillers",
+            description: "Wrinkle correction, dermal fillers, and non-surgical facelifts.",
             bgColor: "#FFD4EE",
             textColor: "#3D3400",
             buttonColor: "#5C0038",
@@ -54,8 +54,8 @@ export default function ServicesGrid() {
                     </h2>
 
                     <p className="text-sm sm:text-base lg:text-lg font-medium text-gray-700 leading-relaxed mt-3 md:mt-4 max-w-3xl mx-auto">
-                        Our dentists provide a range of services to all ages and needs to keep<br className="hidden sm:block" />
-                        their teeth and gums healthy for life.
+                        From advanced skin treatments to permanent makeup, we provide<br className="hidden sm:block" />
+                        comprehensive cosmetic solutions for your beauty and wellness needs.
                     </p>
                 </div>
 

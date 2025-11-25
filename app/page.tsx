@@ -5,6 +5,7 @@ import AboutSection from "../components/AboutSection";
 import TreatmentSlider from "../components/TreatmentSlider";
 import CTASection from "../components/CTASection";
 import ReviewsSection from "../components/ReviewsSection";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <TreatmentSlider />
       <CTASection />
       <ReviewsSection />
+      <Footer />
     </>
   );
 }
