@@ -16,7 +16,7 @@ export default function CTASection() {
                     <div className="hidden md:block absolute right-0 top-0 w-16 lg:w-24 h-16 lg:h-24 border border-white/40 rounded-xl"></div>
 
                     <div className="text-center relative z-10">
-                        <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-medium whitespace-pre-line">
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white tracking-tight font-['Georgia'] whitespace-pre-line">
                             {ctaContent.heading}
                         </h2>
 

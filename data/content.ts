@@ -1,8 +1,8 @@
 // Hero Section Content
 export const heroContent = {
-    heading: "Get Radiant Looking Skin",
-    subheading: "With Expert Care",
-    description: "We provide the widest range of cosmetic treatments available in the cosmetic sector and had wide range of clinics statewide.",
+    heading: "Transform Your Skin,",
+    subheading: "Hair & Body",
+    description: "Experience world-class cosmetology treatments in Hyderabad. From advanced dermatology and laser therapies to permanent makeup and body slimming—achieve your beauty goals with expert care and US-FDA approved technology.",
     buttons: {
         primary: "Explore Services",
         secondary: "Book Free Consultation"
@@ -13,13 +13,13 @@ export const heroContent = {
     ],
     floatingCards: {
         expertCard: {
-            title: "Expert Dermatologist",
-            subtitle: "Certified Specialist"
+            title: "Expert Cosmetologists",
+            subtitle: "Certified Specialists"
         },
         treatmentCard: {
-            title: "Advanced Skin Treatments",
-            description: "Experience cutting-edge dermatology treatments",
-            tags: ["Laser Therapy", "Anti-Aging"]
+            title: "Comprehensive Treatments",
+            description: "Skin, Hair & Body solutions under one roof",
+            tags: ["Laser Therapy", "Hair Care"]
         }
     }
 };
@@ -27,13 +27,13 @@ export const heroContent = {
 // Services Section
 export const servicesSection = {
     heading: "Our Services",
-    description: "From advanced skin treatments to permanent makeup, we provide comprehensive cosmetic solutions for your beauty and wellness needs."
+    description: "Comprehensive cosmetic solutions for all your skin, hair, and body needs. Expert care backed by US-FDA approved equipment and certified professionals."
 };
 
 export const servicesData = [
     {
         title: "Hair\nTreatments",
-        description: "Hair transplantation is a surgical technique that removes hair follicles from one part of the body.",
+        description: "Hair transplantation, PRP therapy, anti-dandruff solutions, and advanced hair regrowth treatments for healthy, voluminous hair.",
         bgColor: "#F4EFCA",
         textColor: "#3D3400",
         buttonColor: "#585019",
@@ -41,23 +41,23 @@ export const servicesData = [
     },
     {
         title: "Skin\nTreatments",
-        description: "Skin treatment involves various procedures and products used to improve the appearance and health.",
+        description: "From acne reduction to skin rejuvenation, melasma treatment to dark circle correction—comprehensive skincare solutions.",
         bgColor: "#E8F4ED",
         textColor: "#0D3B1F",
         buttonColor: "#1B5A30",
         image: "/card2.png"
     },
     {
-        title: "Permanent\nmakeup",
-        description: "Permanent makeup treatment involves tattooing makeup onto the skin to enhance features like eyebrows.",
+        title: "Permanent\nMakeup",
+        description: "Microblading, lip blush, eyebrow microshading, BB Glow, and scalp micropigmentation for effortless beauty.",
         bgColor: "#FFE4E1",
         textColor: "#4D1414",
         buttonColor: "#6B2020",
         image: "/card3.png"
     },
     {
-        title: "Laser\nTreatment",
-        description: "Laser treatment involves using a focused beam of light to treat various medical and cosmetic conditions.",
+        title: "Laser\nTreatments",
+        description: "Laser hair removal, skin resurfacing, tattoo removal, and advanced laser therapies for flawless skin.",
         bgColor: "#E0E7FF",
         textColor: "#1E293B",
         buttonColor: "#334155",
@@ -65,59 +65,76 @@ export const servicesData = [
     },
     {
         title: "Body\nSlimming",
-        description: "Body slimming treatment involves various procedures and products used to reduce body fat and improve body.",
+        description: "CoolSculpting, body contouring, cellulite treatments, and non-surgical liposuction for your ideal figure.",
         bgColor: "#FFF0E6",
         textColor: "#4A2500",
         buttonColor: "#663800",
-        image: "/card5.png"
+        image: "/card2.png"
     },
     {
-        title: "BB Glow\nTreatment",
-        description: "BB Glow is a Semi Permanent Makeup treatment that aids in glow, radiant, pore less looking skin.",
+        title: "Anti-Aging\nTreatments",
+        description: "Wrinkle correction, non-surgical facelifts, dermal fillers, and thread lifts for youthful, radiant skin.",
+        bgColor: "#F3E5F5",
+        textColor: "#4A148C",
+        buttonColor: "#6A1B9A",
+        image: "/card1.png"
+    },
+    {
+        title: "Facial Volume\nCorrections",
+        description: "Cheek augmentation, jawline correction, lip enhancement, and double chin reduction for perfect facial contours.",
+        bgColor: "#E1F5E1",
+        textColor: "#1B5E20",
+        buttonColor: "#2E7D32",
+        image: "/card4.png"
+    },
+    {
+        title: "Scar\nCorrections",
+        description: "Keloid treatment, hypertrophic scar therapy, acne scar correction, and accidental scar removal.",
         bgColor: "#F0F9FF",
         textColor: "#0C4A6E",
         buttonColor: "#075985",
-        image: "/card6.png"
+        image: "/card3.png"
     }
 ];
 
-// About/Welcome Section
+// About/Overview Section
 export const aboutContent = {
-    heading: "More Than a Clinic\n— We're Your Beauty\n& Wellness Partner",
-    description: "At Amista, our team of experienced cosmo-dermatologists and certified therapists use US-FDA approved equipment to deliver exceptional results with the highest medical standards."
+    heading: "More Than a Clinic\n— Your Beauty &\nWellness Partner",
+    description: "Welcome to Amista Cosmetology Clinic, Hyderabad's trusted destination for advanced skin, hair, and cosmetic treatments. Our team of experienced cosmo-dermatologists, aesthetic nurses, and certified therapists use US-FDA approved equipment to deliver exceptional results with the highest medical standards. With clinics in Banjara Hills, Vijayawada, and Manikonda, we bring world-class care closer to you."
 };
 
-// Dual About Section (SplitContentSection)
+// Dual About Section (FeaturesSection)
 export const dualAboutSection = {
     firstSection: {
         label: "About Us",
-        heading: "Your beauty is our passion",
+        heading: "Expert Care, Beautiful Results",
         paragraphs: [
-            "We know the first thing people notice about you is your radiant skin. Our expertise and experience, combined with cutting-edge technologies, ensure you achieve healthy, glowing skin.",
-            "At Amista, we blend advanced dermatology with personalized care to bring out your natural beauty. Every treatment is tailored to your unique needs, ensuring results that make you feel confident and beautiful."
+            "At Amista, we combine cutting-edge technology with personalized care to bring out your natural beauty. Our experienced team specializes in comprehensive treatments for skin, hair, and body—from laser therapies and anti-aging solutions to permanent makeup and body slimming.",
+            "Every treatment is tailored to your unique needs, ensuring safe, effective results that boost your confidence."
         ],
         buttonText: "Learn More"
     },
     secondSection: {
-        label: "New Patients",
-        heading: "We welcome new patients",
+        label: "Patient Journey",
+        heading: "Your transformation begins here",
         paragraphs: [
-            "We are highly skilled in treating a wide range of skin, hair, and cosmetic concerns, and take pride in delivering outstanding patient care and exceptional results every time.",
-            "From acne treatment to anti-aging solutions, permanent makeup to laser therapies, our comprehensive services are designed to help you look and feel your absolute best."
+            "Step 1: Free consultation with our specialists to identify the perfect treatment strategy for you.",
+            "Step 2: Advanced procedures performed with strict medical protocols and US-FDA approved technology.",
+            "Step 3: Comprehensive aftercare with regular check-ups to support your skin, hair, and body regeneration."
         ],
         buttonText: "Book Now"
     }
 };
 
-// Gallery Hero Section (PhotoGallerySection)
+// Gallery Hero Section (GallerySection)
 export const galleryHeroSection = {
     welcomeLabel: "Welcome to Amista Cosmetology Clinic",
     heading: "Creating beautiful transformations for all ages",
-    description: "We are a premier cosmetic clinic that has earned the trust of our patients through expertise, advanced technology, and personalized care.",
+    description: "A premier cosmetic clinic trusted by 1000+ clients for expertise, advanced US-FDA approved technology, and personalized care across Hyderabad.",
     stats: [
         { value: "10+", label: "Years Of Experience" },
         { value: "1000+", label: "Happy Clients" },
-        { value: "15+", label: "Expert Specialists" }
+        { value: "100+", label: "Treatment Options" }
     ],
     images: [
         "/hero.png",
@@ -130,53 +147,43 @@ export const galleryHeroSection = {
 // CTA Section
 export const ctaContent = {
     heading: "Ready to Transform\nYour Look?",
-    description: "Book your free consultation today and discover the best cosmetic treatments for your needs.",
+    description: "Book your free consultation today and discover personalized cosmetic treatments designed just for you. Expert care, advanced technology, proven results.",
     buttonText: "Book Free Consultation"
 };
 
 // Why Choose / Reviews Section
 export const reviewsData = {
-    heading: "8 Reasons\nTo choose Amista",
+    heading: "Why Choose\nAmista",
     reasons: [
-        "We Use Certified Products in Our Work",
-        "You Can Get a Free Consultation",
-        "Over 1000 Positive Feedback From Our Customers",
-        "Pleasant Treatment Bonuses for Our Clients",
-        "Convenient Location in the City",
-        "Impeccable Service with a Professional Approach",
-        "Professionally Trained Masters",
-        "Over 100 Different Procedures"
+        "Experienced In-House Cosmo-Dermatologists",
+        "Well-Trained & Certified Professional Therapists",
+        "Advanced US-FDA Approved Equipment",
+        "Strict Guidelines & Set Protocols for Safety",
+        "Free One-to-One Consultation with Doctor",
+        "1000+ Positive Customer Feedback",
+        "Convenient Locations in Hyderabad",
+        "Over 100 Different Treatment Procedures"
     ],
     testimonials: [
         {
-            name: "B. Deepa",
-            location: "Customer",
-            review: "I consulted Amista for pimple treatment. The Treatment is satisfactory. Received good result. Recommend Amista clinic to everyone who's looking for skin care services."
-        },
-        {
-            name: "O. Prasanna",
-            location: "Customer",
-            review: "The skin treatment is completely fine and Good cleanliness and nice ambiance and receiving while doing skin treatment, keep up the work all the best Amista."
-        },
-        {
             name: "M. Priya",
             location: "Customer",
-            review: "I went to Amista for Acne Treatment, got results in less period of time, Excellent Services & Treatment Very good services for skin treatment."
+            review: "I went to Amista for Acne Treatment and got results in less period of time. Excellent services & treatment. Very good services for skin treatment."
         },
         {
             name: "P. Sravan",
             location: "Customer",
-            review: "I have so much hair fall and visited so many places and finally visited in Amista, they suggested me hair treatment along with medication and i got cured. Strongly recommend to visit."
+            review: "I had severe hair fall and tried many places. Finally visited Amista—they suggested hair treatment with medication and I got cured. Strongly recommend to visit."
         },
         {
             name: "S. Vinay",
             location: "Customer",
-            review: "I underwent a full body laser hair removal treatment, and I was impressed with the high-quality laser machines that Amista uses. It was a pain-free and smooth session."
+            review: "I underwent full body laser hair removal treatment. I was impressed with the high-quality laser machines. It was pain-free and smooth. The dermatologist was very knowledgeable."
         },
         {
             name: "K. Preethi",
             location: "Customer",
-            review: "Hello all, it's been a great experience at the Amista. This is one of its kinds of the professionally run facility in Hyderabad. Really, state of the art equipment and services."
+            review: "Great experience at Amista! One of the most professionally run facilities in Hyderabad. State-of-the-art equipment and services. Highly recommended!"
         }
     ]
 };
@@ -200,11 +207,11 @@ export const contactInfo = {
     locations: [
         {
             name: "Amista Clinic - Banjara Hills",
-            address: "8-2-626/A, 2nd Floor, MS Tower, Rd Number 1, above SBI bank, Avenue 4, Banjara Hills, Hyderabad, Telangana - 500034."
+            address: "8-2-626/A, 2nd Floor, MS Tower, Rd Number 1, above SBI bank, Avenue 4, Banjara Hills, Hyderabad, Telangana - 500034"
         },
         {
             name: "Amista Clinic - Vijayawada",
-            address: "29-28/1-32B, 2nd Floor, ICICI Bank building, Venkateswara Complex, Komelavadi Veedhi, Eluru Rd, opposite Indian Oil Petrol Bunk, Seetharampuram, Signals, Vijayawada, Andhra Pradesh 520002"
+            address: "29-28/1-32B, 2nd Floor, ICICI Bank building, Venkateswara Complex, Komelavadi Veedhi, Eluru Rd, opposite Indian Oil Petrol Bunk, Seetharampuram, Vijayawada, Andhra Pradesh 520002"
         },
         {
             name: "Amista Clinic - Manikonda",
@@ -233,7 +240,7 @@ export const socialLinks = [
 // Footer Headings
 export const footerHeadings = {
     brand: "Amista Cosmetology Clinic",
-    description: "Premier cosmetology clinic in Hyderabad & Vijayawada offering advanced skin, hair & cosmetic treatments.",
+    description: "Hyderabad's premier cosmetology clinic offering 100+ advanced skin, hair & cosmetic treatments with US-FDA approved equipment and expert care.",
     quickLinks: "Quick Links",
     services: "Our Services",
     contact: "Contact Us"

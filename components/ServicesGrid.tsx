@@ -7,7 +7,7 @@ export default function ServicesGrid() {
         <div className="px-4 sm:px-6 md:px-10 lg:px-20 py-12 md:py-16 bg-[#F9F7F4]">
             <div className="container mx-auto max-w-7xl">
                 <div className="text-center mb-10 md:mb-14">
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-black tracking-tight">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-black tracking-tight font-['Georgia']">
                         {servicesSection.heading}
                     </h2>
 
@@ -24,14 +24,14 @@ export default function ServicesGrid() {
                             style={{ backgroundColor: service.bgColor }}
                         >
                             <h3
-                                className="text-xl font-bold italic leading-tight whitespace-pre-line mb-3"
+                                className="text-xl font-bold leading-tight whitespace-pre-line mb-3"
                                 style={{ color: service.textColor }}
                             >
                                 {service.title}
                             </h3>
 
                             <p
-                                className="text-sm font-bold italic"
+                                className="text-sm font-bold"
                                 style={{ color: `${service.textColor}B3` }}
                             >
                                 {service.description}

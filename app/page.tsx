@@ -1,24 +1,26 @@
+import TopBanner from "../components/TopBanner";
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import ServicesGrid from "../components/ServicesGrid";
-import WelcomeSection from "../components/WelcomeSection";
-import SplitContentSection from "../components/SplitContentSection";
-import PhotoGallerySection from "../components/PhotoGallerySection";
+import OverviewSection from "../components/OverviewSection";
+import GallerySection from "../components/GallerySection";
+import FeaturesSection from "../components/FeaturesSection";
 import CTASection from "../components/CTASection";
-import WhyChooseSection from "../components/WhyChooseSection";
+import TestimonialsSection from "../components/TestimonialsSection";
 import Footer from "../components/Footer";
 
 export default function Home() {
   return (
     <>
+      <TopBanner />
       <Header />
       <HeroSection />
+      <OverviewSection />
+      <GallerySection />
       <ServicesGrid />
-      <WelcomeSection />
-      <SplitContentSection />
-      <PhotoGallerySection />
+      <FeaturesSection />
       <CTASection />
-      <WhyChooseSection />
+      <TestimonialsSection />
       <Footer />
     </>
   );

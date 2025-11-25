@@ -2,12 +2,12 @@ import { Sparkles } from "lucide-react";
 import { galleryHeroSection } from '../data/content';
 import Image from 'next/image';
 
-export default function PhotoGallerySection() {
+export default function GallerySection() {
     return (
         <section className="min-h-screen bg-[#FDEFF1] flex flex-col items-center text-gray-900">
             <header className="w-full max-w-6xl mx-auto pt-10 text-center">
                 <div className="text-xs tracking-widest text-[#5b2b35]">{galleryHeroSection.welcomeLabel}</div>
-                <h2 className="mt-6 text-4xl md:text-5xl lg:text-6xl leading-tight font-medium">{galleryHeroSection.heading}</h2>
+                <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-normal text-black tracking-tight font-['Georgia']">{galleryHeroSection.heading}</h2>
                 <p className="mt-4 text-base max-w-2xl mx-auto text-gray-700">{galleryHeroSection.description}</p>
             </header>
 
@@ -38,21 +38,28 @@ export default function PhotoGallerySection() {
                 </div>
             </div>
 
-            <div className="w-full max-w-6xl mx-auto mt-20 px-6">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center py-8">
+            <div className="w-full max-w-5xl mx-auto mt-16 mb-20 px-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
                     {galleryHeroSection.stats.map((stat, i) => (
-                        <div key={i}>
-                            <div className="text-4xl md:text-5xl font-bold text-[#2f2b30]">{stat.value}</div>
-                            <div className="mt-2 text-sm text-gray-700">{stat.label}</div>
+                        <div
+                            key={i}
+                            className="relative px-8 py-10 text-center group"
+                        >
+                            {/* Divider line - hide on last item for mobile, hide on last item for desktop */}
+                            {i < galleryHeroSection.stats.length - 1 && (
+                                <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-16 bg-gradient-to-b from-transparent via-gray-300 to-transparent" />
+                            )}
+
+                            <div className="text-5xl md:text-6xl lg:text-7xl font-light text-[#2f2b30] mb-3 tracking-tight">
+                                {stat.value}
+                            </div>
+                            <div className="text-xs md:text-sm uppercase tracking-widest text-gray-600 font-medium">
+                                {stat.label}
+                            </div>
                         </div>
                     ))}
                 </div>
             </div>
-
-            <footer className="w-full max-w-6xl mx-auto py-8 text-center text-sm text-gray-600 flex items-center justify-center gap-2">
-                <Sparkles size={18} />
-                <span>Amista Cosmetology Clinic</span>
-            </footer>
         </section>
     );
 }

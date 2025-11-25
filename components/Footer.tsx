@@ -16,7 +16,7 @@ export default function Footer() {
                             alt="Amista Cosmetology Clinic"
                             width={140}
                             height={45}
-                            className="object-contain w-32 h-auto brightness-0 invert"
+                            className="object-contain w-48 h-auto brightness-0 invert"
                         />
                         <p className="text-white/80 text-sm leading-relaxed">
                             {footerHeadings.description}
@@ -75,11 +75,13 @@ export default function Footer() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {contactInfo.locations.map((location, index) => (
                             <div key={index} className="space-y-2">
-                                <h4 className="font-medium text-white">{location.name}</h4>
-                                <div className="flex items-start gap-2 text-white/80 text-sm">
-                                    <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                                    <p>{location.address}</p>
-                                </div>
+                                <h4 className="font-semibold text-white flex items-center gap-2">
+                                    <MapPin className="w-4 h-4 flex-shrink-0" />
+                                    {location.name}
+                                </h4>
+                                <p className="text-white/80 text-sm leading-relaxed">
+                                    {location.address}
+                                </p>
                             </div>
                         ))}
                     </div>

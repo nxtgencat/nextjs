@@ -4,18 +4,9 @@ import { ArrowRight } from "lucide-react";
 import { reviewsData } from "../data/content";
 import CircleGroup from "./AvatarDock";
 
-export default function WhyChooseSection() {
+export default function TestimonialsSection() {
     return (
-        <section className="w-full bg-[#EAF7F8] px-4 md:px-10 lg:px-20 pb-12 md:pb-16 lg:pb-20">
-            <div className="container mx-auto max-w-7xl">
-                <div className="mb-10 md:mb-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                    <h3 className="text-[#1F325C] text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-medium leading-tight text-center md:text-left whitespace-pre-line">
-                        {reviewsData.heading}
-                    </h3>
-
-                    <CircleGroup images={["/hero.png", "/Images.png", "/small.png"]} />
-                </div>
-
+        <section className="w-full bg-[#EAF7F8] px-5 py-10 md:px-10 lg:px-35 md:py-16 lg:py-20">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10">
                     {reviewsData.testimonials.map((testimonial: { name: string; location: string; review: string }, i: number) => (
                         <div key={i} className="bg-transparent">
@@ -38,7 +29,6 @@ export default function WhyChooseSection() {
                         </div>
                     ))}
                 </div>
-            </div>
         </section>
     );
 }

@@ -3,7 +3,7 @@ import { dualAboutSection } from '../data/content';
 import DecorativeFrame from './DecorativeFrame';
 import Image from 'next/image';
 
-export default function SplitContentSection() {
+export default function FeaturesSection() {
     return (
         <section className="min-h-screen bg-rose-50 flex items-center justify-center">
             <div className="max-w-6xl w-full px-8 py-20 grid grid-cols-12 gap-8">
@@ -13,7 +13,7 @@ export default function SplitContentSection() {
 
                 <div className="col-span-7 flex flex-col justify-center">
                     <p className="text-xs text-[#6b4250] tracking-wider uppercase">{dualAboutSection.firstSection.label}</p>
-                    <h2 className="mt-4 text-4xl font-bold text-[#1f1b1b]">{dualAboutSection.firstSection.heading}</h2>
+                    <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-normal text-black tracking-tight font-['Georgia']">{dualAboutSection.firstSection.heading}</h2>
                     {dualAboutSection.firstSection.paragraphs.map((para, i) => (
                         <p key={i} className="mt-4 text-sm text-[#3c3838] max-w-xl leading-relaxed">{para}</p>
                     ))}
@@ -28,7 +28,7 @@ export default function SplitContentSection() {
 
                 <div className="col-span-7 order-2 flex flex-col justify-center">
                     <p className="text-xs text-[#6b4250] tracking-wider uppercase">{dualAboutSection.secondSection.label}</p>
-                    <h2 className="mt-4 text-3xl font-bold text-[#1f1b1b]">{dualAboutSection.secondSection.heading}</h2>
+                    <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-normal text-black tracking-tight font-['Georgia']">{dualAboutSection.secondSection.heading}</h2>
                     {dualAboutSection.secondSection.paragraphs.map((para, i) => (
                         <p key={i} className="mt-4 text-sm text-[#3c3838] max-w-lg leading-relaxed">{para}</p>
                     ))}
