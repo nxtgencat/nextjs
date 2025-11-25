@@ -1,18 +1,21 @@
-import Image from "next/image";
-import ServicesCards from "../components/services";
-import ServicesBottom from "../components/servicesBottom";
-import SkinTreatmentSlider from "../components/sliders";
-import Hero from "../components/Hero";
-import ReviewSection from "../components/FooterCTA";  
+import Header from "../components/Header";
+import HeroSection from "../components/HeroSection";
+import ServicesGrid from "../components/ServicesGrid";
+import AboutSection from "../components/AboutSection";
+import TreatmentSlider from "../components/TreatmentSlider";
+import CTASection from "../components/CTASection";
+import ReviewsSection from "../components/ReviewsSection";
+
 export default function Home() {
   return (
     <>
-    
-    <Hero />
-    <ServicesCards/>
-    <ServicesBottom/>
-    <SkinTreatmentSlider />
-    <ReviewSection/>
+      <Header />
+      <HeroSection />
+      <ServicesGrid />
+      <AboutSection />
+      <TreatmentSlider />
+      <CTASection />
+      <ReviewsSection />
     </>
-  )
+  );
 }
