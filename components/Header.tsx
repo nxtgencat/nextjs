@@ -4,6 +4,11 @@ import Image from "next/image";
 import { useState } from "react";
 import { Phone, MapPin, Menu, X } from "lucide-react";
 import { navigationLinks, contactInfo } from "../data/content";
+import HairDropdownMenu from "./HairDropdownMenu";
+import SkinDropdownMenu from "./SkinDropdown";
+import PermanentMakeup from "./PermanentMakeup";
+import BodySliming from "./BodySliming";
+import PathLabs from "./PathLabs";
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -25,7 +30,7 @@ export default function Header() {
                         </a>
 
                         <nav className="hidden lg:flex items-center gap-1">
-                            {navigationLinks.map((link) => (
+                            {/* {navigationLinks.map((link) => (
                                 <a
                                     key={link.href}
                                     href={link.href}
@@ -33,7 +38,13 @@ export default function Header() {
                                 >
                                     {link.label}
                                 </a>
-                            ))}
+                            ))} */}
+                          <HairDropdownMenu />
+                          <SkinDropdownMenu />
+                          <PermanentMakeup />
+                          <BodySliming />
+                          <PathLabs />
+
                         </nav>
 
                         <div className="hidden lg:flex items-center gap-3">

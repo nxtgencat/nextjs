@@ -20,7 +20,9 @@ export default function HeroSection() {
                             </h1>
 
                             <div className="flex justify-center lg:justify-start mt-4 md:mt-6">
+                                <a href="../components/ServiceGrid" aria-label="Explore our services">
                                 <CircleGroup images={["/hero.png", "/small.png", "/red.png"]} />
+                                </a>
                             </div>
 
                             <p className="text-[#6A6A6A] mt-4 md:mt-6 max-w-lg mx-auto lg:mx-0 text-sm md:text-base leading-relaxed">

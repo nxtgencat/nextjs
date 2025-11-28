@@ -1,4 +1,7 @@
 // Hero Section Content
+import { title } from "process";
+import services from "../components/ServicesGrid";
+import { bg } from "date-fns/locale";
 export const heroContent = {
     heading: "Transform Your Skin,",
     subheading: "Hair & Body",
@@ -97,6 +100,33 @@ export const servicesData = [
     }
 ];
 
+export const hairServices = [
+    {
+        title: "Hair Transplantation",
+        description: "/hair-transplantation",
+        bgColor: "#F4EFCA",
+        textColor: "#3D3400",
+        buttonColor: "#585019",
+        image: "/card1.png"
+    },
+    {
+        title: "PRP Therapy",
+        description: "/prp-therapy",
+        bgColor: "#E8F4ED",
+        textColor: "#0D3B1F",
+        buttonColor: "#1B5A30",
+        image: "/card2.png"
+    },
+    {
+        title: "Anti Dandruff Solutions",
+        description: "/anti-dandruff-solutions",
+        bgColor: "#FFE4E1",
+        textColor: "#4D1414",
+        buttonColor: "#6B2020",
+        image: "/card3.png"
+    }
+];
+
 // About/Overview Section
 export const aboutContent = {
     heading: "More Than a Clinic\n— Your Beauty &\nWellness Partner",
@@ -190,8 +220,8 @@ export const reviewsData = {
 
 // Navigation Links
 export const navigationLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#services", label: "Services" },
+    { href: "/", label: "Home" },
+    { href: "/services", label: "Services" },
     { href: "#about", label: "About Us" },
     { href: "#testimonials", label: "Testimonials" }
 ];

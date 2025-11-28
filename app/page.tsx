@@ -9,6 +9,7 @@ import CTASection from "../components/CTASection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import Footer from "../components/Footer";
 
+
 export default function Home() {
   return (
     <>
@@ -22,6 +23,7 @@ export default function Home() {
       <CTASection />
       <TestimonialsSection />
       <Footer />
+  
     </>
   );
 }

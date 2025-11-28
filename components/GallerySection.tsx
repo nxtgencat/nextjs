@@ -18,7 +18,7 @@ export default function GallerySection() {
                         alt=""
                         width={1200}
                         height={420}
-                        className="w-[1200px] h-[420px]"
+                        className="w-[1400px] h-[520px]"
                     />
                 </div>
 
